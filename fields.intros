@@ -1,0 +1,9 @@
+{"query":"{
+  __type(name: \"Project\") {
+    fields {
+      name
+      }
+    }
+  }
+"}
+

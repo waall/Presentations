@@ -1,0 +1,17 @@
+No jogo MMORPG Tibia, exisita um bug no mercado do jogo.
+
+O mercado do jogo é composto por moedas virtuais que sao adquiridas atraves de dinheiro real.
+
+O bug consistia no tipo "INT" dos valores anunciado dos itens.
+
+Uma vez que o jogo foi feito em sua maioria na linguagem C++ sabemos da definição de tipagem do tipo "INT".
+
+O tipo "INT" é composto por 4 bytes independente da arquitetura.
+
+Ou seja o range é de -2,147,483,648 até 2,147,483,647.
+
+Como se trata de um mercado não pode haver valores negativo então é de 0 ate 4,294,967,294 (o dobro do range máximo anterior)
+
+Com isso, se um item for comprado por 4,294,967,296 irá estoura o limite do tipo INT retornando o valor 0.
+
+E isso causa inumeros problemas, veja o GIF.
